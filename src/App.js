@@ -1,12 +1,5 @@
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useContext } from "react";
-import { AuthProvider } from "./context/AuthContext";
 import AuthContext from "./context/AuthContext";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -43,8 +36,8 @@ function Main() {
 
 export default function App() {
   return (
-    <AuthProvider>
+    <>
       <Main />
-    </AuthProvider>
+    </>
   );
 }
